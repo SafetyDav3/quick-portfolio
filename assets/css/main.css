@@ -1,0 +1,93 @@
+:root {
+  /* ↓↓↓ Main color pallet ↓↓↓ */
+  --primary-color: #f5deb3;
+  --secondary-color: #2b2d42;
+  --tertiary-color: #e86a92;
+  --quaternary-color: #41e2ba;
+  --quinary-color: #679436;
+  /* ↑↑↑ Main color pallet end ↑↑↑ */
+
+  /* ↓↓↓ Temporary variables ↓↓↓ */
+  --div-outline: 1px solid red;
+  --div-background: rgba(0, 0, 255, 0.24);
+  /* ↑↑↑ Temporary variables end ↑↑↑ */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: var(--primary-color);
+}
+
+header {
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 12vh;
+  background-image: linear-gradient(
+    var(--quinary-color),
+    var(--secondary-color)
+  );
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10vw;
+  height: 100vh;
+  float: left;
+  background-image: linear-gradient(
+    360deg,
+    var(--quinary-color),
+    var(--secondary-color)
+  );
+
+  position:fixed ;
+  left: 0;
+}
+.ghost-nav {
+    display: none;
+  z-index: 0;
+  width: 10vw;
+  height: 100vh;
+  float: left;
+  position: relative;
+  left: 0;
+  /* border: 1px solid blue; */
+  /* background: blue; */
+}
+
+main {
+    background: var(--div-background);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    height: 100vw;
+    position:fixed;
+    right: 0;
+
+
+}
+
+.hero {
+    display: flex;
+    width: 88vw;
+    height: 20vh;
+  background: var(--div-background);
+  margin-top: 1vw;
+}
+
+.projects {
+  background: wheat;
+  display: flex;
+}
+
