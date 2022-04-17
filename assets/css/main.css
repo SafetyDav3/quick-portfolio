@@ -3,13 +3,15 @@
   --primary-color: #f5deb3;
   --secondary-color: #2b2d42;
   --tertiary-color: #e86a92;
+  --tertiary-color-shadows: rgb(232, 106, 146, 0.5);
+
   --quaternary-color: #41e2ba;
   --quinary-color: #679436;
   /* ↑↑↑ Main color pallet end ↑↑↑ */
 
   /* ↓↓↓ Attribute variables ↓↓↓ */
   --box-shadow-main: 10px 5px 10px 5px rgba(0, 0, 0, 0.4);
-  --text-shadow-main: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  --text-shadow-main: 4px 2px 5px var(--tertiary-color-shadows);
   /* ↓↓↓ Attribute variables end ↓↓↓ */
 
   /* ↓↓↓ Temporary variables ↓↓↓ */
@@ -51,21 +53,22 @@ header a img {
   border-radius: 50%;
   margin-right: 2em;
   box-shadow: var(--box-shadow-main);
-
 }
 #my-name {
   font-family: sans-serif;
   font-weight: bolder;
   text-shadow: var(--text-shadow-main);
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-size: 3.5rem;
   margin-left: 1em;
+  color: var(--primary-color);
 }
 
 #my-tag {
-  font-family: 'My Soul', cursive;
+  font-family: "My Soul", cursive;
   font-size: 4rem;
   text-shadow: var(--text-shadow-main);
+  color: var(--primary-color);
 
   margin: auto;
 }
@@ -88,16 +91,47 @@ nav {
   position: fixed;
   box-shadow: var(--box-shadow-main);
 }
-.ghost-nav {
-  display: none;
-  z-index: 0;
-  width: 10vw;
-  height: 100vh;
-  float: left;
-  position: relative;
-  left: 0;
-  /* border: 1px solid blue; */
-  /* background: blue; */
+
+nav h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2.1em;
+  margin-top: 1em;
+  color: var(--primary-color);
+  text-shadow: var(--text-shadow-main);
+}
+
+nav .divider {
+  background: var(--quaternary-color);
+  height: 8px;
+  width: 75%;
+  margin: 1em auto;
+  border-radius: 3px;
+  box-shadow: var(--box-shadow-main);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  text-shadow: var(--text-shadow-main);
+  margin: 0.5em;
+  letter-spacing: 0.04em;
+}
+.link-containers {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+nav i {
+  font-size: 3em;
+  color: var(--primary-color);
+  text-shadow: var(--text-shadow-main);
+  margin: 0.1em 0.2em 0 0.2em;
 }
 
 main {
@@ -140,10 +174,17 @@ main {
   margin: auto;
   background: wheat;
   display: flex;
+  overflow: hidden;
 }
 .projects a {
   width: 100%;
   height: 100%;
+}
+.projects img {
+  width: 100%;
+}
+.projects span {
+  position:absolute;
 }
 
 .main-project {
@@ -155,8 +196,6 @@ main {
   background-size: cover;
   box-shadow: var(--box-shadow-main);
 }
-
-
 
 .secondary-projects {
   margin: 1.5em auto;
