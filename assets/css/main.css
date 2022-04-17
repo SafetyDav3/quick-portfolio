@@ -40,6 +40,12 @@ header {
   top: 0;
 }
 
+header a img {
+  width: 10vh;
+  border-radius: 50%;
+  margin-right: 2em;
+}
+
 nav {
   margin-top: 12vh;
   z-index: 9998;
